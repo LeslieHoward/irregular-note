@@ -4,9 +4,6 @@ export default defineConfig({
   outputPath: 'docs',
   publicPath: './',
   base: '/irregular-note',
-  nodeModulesTransform: {
-    type: 'none',
-  },
   hash: true,
   title: false,
   ignoreMomentLocale: true,
