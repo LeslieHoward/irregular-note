@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/irregular-note',
   title: 'Site Name',
   mode: 'site',
+  dynamicImport: {},
   // chainWebpack(memo) {
   //   memo
   //     .entry('index')
