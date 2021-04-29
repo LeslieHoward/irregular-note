@@ -1,15 +1,15 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from 'dumi';
 
 export default defineConfig({
   outputPath: 'docs',
   publicPath: './',
   base: '/irregular-note',
-  hash: true,
-  title: false,
-  ignoreMomentLocale: true,
-  alias: {
-    '@': require('path').resolve(__dirname, 'src'),
-  },
-  routes: [{ path: '/', component: '@/pages/index' }],
-  fastRefresh: {},
+  title: 'Site Name',
+  mode: 'site',
+  // chainWebpack(memo) {
+  //   memo
+  //     .entry('index')
+  //     .add('src/index.md')
+  //     .end();
+  // },
 });

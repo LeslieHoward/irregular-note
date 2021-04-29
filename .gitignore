@@ -14,7 +14,10 @@
 .DS_Store
 
 # umi
-/src/.umi
-/src/.umi-production
-/src/.umi-test
-/.env.local
+.umi
+.umi-production
+.env.local
+
+# ide
+/.vscode
+/.idea
