@@ -1,16 +1,9 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  outputPath: 'docs',
-  publicPath: './',
-  base: '/irregular-note',
-  title: 'Site Name',
+  base: '/irregular-note/',
+  publicPath: '/irregular-note/',
+  title: '周报',
   mode: 'site',
   dynamicImport: {},
-  // chainWebpack(memo) {
-  //   memo
-  //     .entry('index')
-  //     .add('src/index.md')
-  //     .end();
-  // },
 });
