@@ -20,6 +20,10 @@ export default defineConfig({
     '@primary-color': '#a0d911',
   },
   styles: [
-    `.__dumi-default-navbar-logo { pointer-events: none; } nav > span { display: none !important; }`,
+    `
+    .__dumi-default-navbar-logo { pointer-events: none; } 
+    .__dumi-default-search > ul { transform: translate(-200px, 0px); }
+    nav > span { display: none !important; }
+    `,
   ],
 });
