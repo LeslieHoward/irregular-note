@@ -21,9 +21,9 @@ export default defineConfig({
   },
   styles: [
     `
-    .__dumi-default-navbar-logo { pointer-events: none; } 
-    .__dumi-default-search > ul { left: auto; right: 0; }
-    nav > span { display: none !important; }
+    .__dumi-default-navbar-logo { pointer-events: none; }
+    .__dumi-default-search > ul { left: auto!important; right: 0; }
+    nav > span { display: none!important; }
     `,
   ],
 });
