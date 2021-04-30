@@ -1,32 +1,25 @@
 import { defineConfig } from 'dumi';
+import { traverse } from './util';
 
 const path = require('path');
-const fs = require('fs');
-const _ = require('lodash');
-
-function generateRoutes(targetPath) {
-  let files = fs.readdirSync(targetPath);
-  return _.reduce(
-    files,
-    (acc, item) => {
-      if (/\d+[^\d]\.md$/.test(item)) {
-        acc['/2021'].push({ title: item, path: `${item}` });
-      }
-      return acc;
-    },
-    { '/2021': [] },
-  );
-}
+const menus = traverse(path.resolve(__dirname, 'docs'));
 
 export default defineConfig({
-  base: '/irregular-note/',
+  base: '/irregular-note',
   publicPath: '/irregular-note/',
   mode: 'site',
   dynamicImport: {},
+  resolve: {
+    includes: ['docs'],
+  },
   title: '兑刊',
   logo: '/images/logo.svg',
-  // navs: [null],
+  favicon: '/images/logo.ico',
+  menus: menus,
   theme: {
     '@primary-color': '#a0d911',
   },
+  styles: [
+    `.__dumi-default-navbar-logo { pointer-events: none; } nav > span { display: none !important; }`,
+  ],
 });
