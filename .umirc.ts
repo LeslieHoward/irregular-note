@@ -13,8 +13,8 @@ export default defineConfig({
     includes: ['docs'],
   },
   title: '兑刊',
-  logo: '/images/logo.svg',
-  favicon: '/images/logo.ico',
+  logo: '/irregular-note/images/logo.svg',
+  favicon: '/irregular-note/images/logo.ico',
   menus: menus,
   theme: {
     '@primary-color': '#a0d911',
