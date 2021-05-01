@@ -10,7 +10,15 @@ export function joinPath(main, sub) {
     .value();
 }
 
-export function loop() {}
+export function sort(target) {
+  return _.chain(target)
+    .sortBy(value => {
+      const name = path.basename(value, '.md');
+      return _.toNumber(name);
+    })
+    .reverse()
+    .value();
+}
 
 export function traverse(targetPath) {
   const accumulation = [];
@@ -24,16 +32,12 @@ export function traverse(targetPath) {
       if (isDirectory) {
         loop(filePath, currentPath);
       } else {
-        const title = _.replace(item, /\.md$/, '');
-
-        if (!_.isNil(title)) {
-          accumulation.push(currentPath);
-        }
+        accumulation.push(currentPath);
       }
     });
   };
 
   loop(targetPath);
 
-  return { '/notes': [{ title: 'notes', children: accumulation }] };
+  return { '/notes': [{ title: 'notes', children: sort(accumulation) }] };
 }
