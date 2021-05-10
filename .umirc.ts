@@ -16,6 +16,13 @@ export default defineConfig({
   logo: '/irregular-note/images/logo.svg',
   favicon: '/irregular-note/images/logo.ico',
   menus: menus,
+  navs: [
+    null,
+    {
+      title: 'GitHub',
+      path: 'https://github.com/LeslieHoward/irregular-note',
+    },
+  ],
   theme: {
     '@primary-color': '#a0d911',
   },
@@ -23,7 +30,7 @@ export default defineConfig({
     `
     .__dumi-default-navbar-logo { pointer-events: none; }
     .__dumi-default-search > ul { left: auto!important; right: 0; }
-    nav > span { display: none!important; }
+    nav > span:nth-of-type(1) { display: none!important; }
     `,
   ],
 });
