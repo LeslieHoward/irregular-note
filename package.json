@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "dui",
+  "homepage": "https://lesliehoward.github.io/irregular-note/notes",
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
