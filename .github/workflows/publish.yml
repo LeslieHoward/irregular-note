@@ -19,8 +19,10 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: peaceiris/actions-gh-pages@v3
         with:
           token: ${{ secrets.IRREGULAR_NOTE }}
+          github_token: ${{ secrets.IRREGULAR_NOTE }}
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
+          publish_dir: dist # The folder the action should deploy.
