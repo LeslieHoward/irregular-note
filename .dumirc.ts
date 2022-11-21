@@ -8,7 +8,7 @@ export default defineConfig({
   base: '/irregular-note/',
   publicPath: '/irregular-note/',
   themeConfig: {
-    name: '兑刊',
+    name: '观刊',
     logo: '/irregular-note/images/logo.svg',
     sidebar: [sidebar],
     footer: '<div style="height:20px;" />',
